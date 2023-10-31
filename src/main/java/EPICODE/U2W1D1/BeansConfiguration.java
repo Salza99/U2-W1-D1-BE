@@ -12,6 +12,7 @@ import java.util.List;
 @Configuration
 public class BeansConfiguration {
 
+    
 
     @Bean
     public Pizza margherita() {
@@ -25,7 +26,7 @@ public class BeansConfiguration {
         return pizza;
     }
     @Bean
-    public Pizza pizzachose(Topping a) {
+    public Pizza pizzaChose(Topping a) {
         Pizza pizza = new Pizza("prosciutto", 5.5);
         List<Topping> margheritaToppings = new ArrayList<>();
         Topping pomodoro = new Topping("pomodoro", 65, 0.0);
@@ -45,4 +46,6 @@ public class BeansConfiguration {
     public Drink sprite(){
         return new Drink("sprite", 2.5, 160);
     }
+    @Bean
+    public Topping ingredient() {return new Topping("prosciutto", 45, 1.0);}
 }

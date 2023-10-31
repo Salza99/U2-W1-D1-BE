@@ -1,8 +1,10 @@
 package EPICODE.U2W1D1.entities;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class Menu {
     public List<Pizza> pizzas;
     public List<Drink> beverages;

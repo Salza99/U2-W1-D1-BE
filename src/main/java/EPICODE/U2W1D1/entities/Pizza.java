@@ -3,10 +3,11 @@ package EPICODE.U2W1D1.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-
+@Component
 public class Pizza  {
     private String name;
     private Double price;

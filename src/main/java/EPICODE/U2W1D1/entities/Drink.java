@@ -1,5 +1,8 @@
 package EPICODE.U2W1D1.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Drink{
     private String name;
     private Double price;
