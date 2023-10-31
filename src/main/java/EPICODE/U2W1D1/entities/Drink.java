@@ -14,6 +14,9 @@ public class Drink{
         this.calories = calories;
     }
 
+    public Drink() {
+    }
+
     public String getName() {
         return name;
     }

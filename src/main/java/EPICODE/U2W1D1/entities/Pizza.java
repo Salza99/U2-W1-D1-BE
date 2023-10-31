@@ -5,17 +5,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class Pizza  {
     private String name;
     private Double price;
-    private List<Topping> Ingredients;
+    private List<Topping> ingredients;
 
     public Pizza(String name, Double price) {
         this.name = name;
         this.price = price;
+        ingredients = new ArrayList<>();
+    }
+
+    public void addIngredients(Topping ingredient) {
+        ingredients.add(ingredient);
+    }
+
+    public Pizza() {
     }
 
     public String getName() {
@@ -35,10 +44,14 @@ public class Pizza  {
     }
 
     public List<Topping> getIngredients() {
-        return Ingredients;
+        return ingredients;
     }
 
-    public void setIngredients(List<Topping> ingredients) {
-        Ingredients = ingredients;
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

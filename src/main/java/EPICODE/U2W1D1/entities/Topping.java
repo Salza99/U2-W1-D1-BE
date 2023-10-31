@@ -3,8 +3,9 @@ package EPICODE.U2W1D1.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Topping {
     private String name;
     private int calories;
@@ -15,6 +16,9 @@ public class Topping {
         this.name = name;
         this.calories = calories;
         this.price = price;
+    }
+
+    public Topping() {
     }
 
     public String getName() {
